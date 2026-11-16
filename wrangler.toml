@@ -1,0 +1,26 @@
+name = "asphalt-outlaws"
+main = "worker.js"
+compatibility_date = "2025-06-01"
+
+# Arquivos do jogo (pasta public/): index.html, sw.js, version.json, manifest, ícones, _headers
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+# Durable Object: guarda todas as salas/jogadores em tempo real
+[[durable_objects.bindings]]
+name = "GAME_HUB"
+class_name = "GameHub"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["GameHub"]
+
+# Variáveis PÚBLICAS (a chave "publishable" já está no seu index.html). NÃO coloque a service_role aqui!
+[vars]
+SUPABASE_URL = "https://aogonzfgzpifzqfsjgrl.supabase.co"
+SUPABASE_ANON_KEY = "sb_publishable_IOXWF3RiD1aw_fhb0h34zA_7pb5q9RC"
+ALLOWED_ORIGINS = ""
+
+# Segredo (cadastre no painel ou com `wrangler secret put SUPABASE_SERVICE_KEY`):
+#   SUPABASE_SERVICE_KEY
