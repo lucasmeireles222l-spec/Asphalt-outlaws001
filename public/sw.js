@@ -5,14 +5,14 @@
  * - Ativação só quando o jogador toca em ATUALIZAR AGORA (mensagem SKIP_WAITING).
  * - Abre offline a última versão instalada. Nunca toca em /ws, /health, Supabase nem salvamentos. */
 'use strict';
-const VERSION = '2026.11.15-1';
-const BUILD_HASH = '91d3093e04bcf27a';
+const VERSION = '2026.11.17-2';
+const BUILD_HASH = 'ab26095eccb0d533';
 const FILES = {
-  "/index.html": "3f3ce8ec5a630fdb3845c694ddebfca5294c87d443fae5270a57319a64af6509",
+  "/index.html": "a913450e5f28cb71b20d7510f750945115d93a2a2d11fc6b7b3c5a706e8f3071",
   "/manifest.webmanifest": "5f5e84ce100355c686ea66affaaec3b18f830cbd2ca1b3014c41f56237f6ba11",
-  "/icon-192.png": "621bf4c89b862d57efeee01fb23e925a00ea87fe33dd6bb7013d7befb455b5b0",
-  "/icon-512.png": "bc9e0ed50a4b04f1434f9c3ad745de5667b29adac5f506ef2a4b4e67b7a9ad65",
-  "/icon-maskable-512.png": "764fbf7f1f9dd349ba658c02f8beb7030d174c0f04cab4785149c09588e92f3b"
+  "/icon-192.png": "4d200ce2a56424705b5b1abd45e10c8a86f5f890e6154535a045b9008aad1921",
+  "/icon-512.png": "e133d90009f85d794eac32ce14c562ae277e47130a6f3bfd5e3f4fe59469a8d2",
+  "/icon-maskable-512.png": "ac6f36c82d54435461859044fd2292db4e50164273c1c331c33e9da8e441b493"
 };                 /* { "/index.html": "sha256…", … } */
 const STRICT = true;                     /* false = só avisa no console quando o hash diverge (veja LEIA-ME) */
 const STATIC = 'ao-static-' + VERSION, RT = 'ao-rt';
